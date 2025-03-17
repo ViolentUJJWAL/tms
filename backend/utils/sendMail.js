@@ -15,7 +15,7 @@ const sendEmail = async (userEmail, sub, msg) => {
     try {
         console.log(userEmail)
         const info = await transport.sendMail({
-            from: `"CodeDev"<${process.env.EMAIL_ID}>`,
+            from: `"${process.env.WEB_NAME}"<${process.env.EMAIL_ID}>`,
             to: userEmail,
             subject: sub,
             html: msg
